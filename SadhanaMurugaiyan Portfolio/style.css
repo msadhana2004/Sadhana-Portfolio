@@ -1,0 +1,441 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color:rgb(202, 175, 175);
+}
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("../img/port1.avif");
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+}
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("https://img.freepik.com/free-vector/paper-style-dynamic-lines-background_23-2149008629.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 200px 0;
+    color: #fff;
+    text-align: center;
+}
+
+/* Image Animation - Continuous Scaling */
+.about-img {
+    max-width: 80%;
+    animation: zoomPulse 3s ease-in-out infinite alternate;
+}
+
+/* Keyframes for continuous scaling */
+@keyframes zoomPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* increase size */
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-img {
+        margin-top: 20px;
+    }
+}
+
+
+
+/* Skill Level Section */
+.skill-box {
+    margin-bottom: 25px;
+}
+
+.skill-box span {
+    font-weight: 600;
+    color: #333;
+}
+
+.progress {
+    height: 12px;
+    border-radius: 20px;
+    background-color: #e9ecef;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 20px;
+    animation: loadSkill 2s ease forwards;
+}
+
+/* Skill Values (10-based) */
+.progress-bar.html {
+    width: 90%;
+    background: #0d6efd;
+}
+
+.progress-bar.css {
+    width: 80%;
+    background: #6610f2;
+}
+
+.progress-bar.dbms {
+    width: 60%;
+    background: #198754;
+}
+
+.progress-bar.java {
+    width: 60%;
+    background: #fd7e14;
+}
+
+.progress-bar.bootstrap {
+    width: 80%;
+    background: #7952b3;
+}
+
+.progress-bar.git {
+    width: 70%;
+    background: #212529;
+}
+
+/* Animation */
+@keyframes loadSkill {
+    from {
+        width: 0;
+    }
+}
+
+.edu-section {
+    padding: 60px 20px;
+    background: #f4f7ff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.edu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Education Section */
+#education {
+    background: linear-gradient(135deg, #f5f7ff, #eef1ff);
+}
+
+/* Card Style */
+.edu-card {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 30px;
+    border-radius: 18px;
+    color: #fff;
+    height: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeUp 1.2s ease;
+}
+
+/* Hover Animation */
+.edu-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Styling */
+.edu-card h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.edu-card p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 8px;
+}
+
+.edu-card span {
+    display: block;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Different Colors for Each Card */
+.edu-card:nth-child(1) {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.col-md-6:nth-child(2) .edu-card {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.col-md-6:nth-child(3) .edu-card {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+/* Entry Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+
+/* Base progress bar */
+.progress-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 20px;
+    animation: skillLoop 4s ease-in-out infinite;
+}
+
+/* Individual skill levels */
+.progress-bar.html {
+    background: #0d6efd;
+    --target: 90%;
+}
+
+.progress-bar.css {
+    background: #6610f2;
+    --target: 80%;
+}
+
+.progress-bar.dbms {
+    background: #198754;
+    --target: 60%;
+}
+
+.progress-bar.java {
+    background: #fd7e14;
+    --target: 60%;
+}
+
+.progress-bar.bootstrap {
+    background: #7952b3;
+    --target: 80%;
+}
+
+.progress-bar.git {
+    background: #212529;
+    --target: 70%;
+}
+
+/* Animation */
+@keyframes skillLoop {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: var(--target);
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+
+/* Internship Section */
+#internships {
+    background-color: #f9f9f9;
+}
+
+.internship-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.internship-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.internship-img {
+    transition: transform 0.6s ease;
+}
+
+.internship-img:hover {
+    transform: scale(1.05);
+}
+
+/* Animation on load */
+.internship-box {
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project-details {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Animated gradient background (optional) */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.project-card {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Certifications */
+.cert-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cert-card img {
+    height: 230px;
+    object-fit: cover;
+}
+
+.cert-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Section title spacing */
+#certifications h3 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* Footer */
+.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+/* Animations */
+.animate-fade {
+    animation: fadeIn 1.5s ease;
+}
+
+.animate-left {
+    animation: slideLeft 1.5s ease;
+}
+
+.animate-right {
+    animation: slideRight 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
