@@ -1,0 +1,230 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-image: url('https://img.freepik.com/premium-photo/workspace-with-working-supplies_204757-775.jpg?semt=ais_hybrid&w=740&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+h2,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    padding: 1rem 0;
+    background: linear-gradient(70deg, rgb(69, 95, 166), rgb(32, 66, 32));
+    box-shadow: 0 0 40px rgb(69, 95, 166);
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+    color: #0d6efd;
+}
+
+/* ================= PROFILE IMAGE ================= */
+.profile-img-wrapper {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    background: linear-gradient(70deg, rgb(69, 95, 166), rgb(32, 66, 32));
+    box-shadow: 0 0 40px rgb(69, 95, 166);
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ================= HOME ================= */
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#home p.lead {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+#home .btn {
+    border-radius: 50px;
+    padding: 10px 25px;
+}
+
+/* ================= SKILLS ================= */
+.progress {
+    height: 22px;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ================= EDUCATION ================= */
+#education .card {
+    background: linear-gradient(70deg, rgb(69, 95, 166), rgb(32, 66, 32));
+    box-shadow: 0 0 40px rgb(69, 95, 166);
+    border-radius: 15px;
+}
+
+#education .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* ================= INTERNSHIPS ================= */
+#internships ul {
+    padding-left: 18px;
+}
+
+#internships img {
+    border-radius: 10px;
+}
+
+
+/* ================= PROJECT CARD ================= */
+.card-hover {
+    background: linear-gradient(70deg, rgb(32, 66, 32), rgb(69, 95, 166));
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(69, 95, 166, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-6px);
+}
+
+/* ================= TEXT MOVE ON HOVER ================= */
+.project-text {
+    transition:
+        transform 0.5s ease,
+        letter-spacing 0.5s ease;
+}
+
+/* Animate text ONLY when card is hovered */
+.card-hover:hover .project-text {
+    transform: translateX(6px);
+    letter-spacing: 1px;
+}
+
+/* Mobile safe */
+@media (max-width: 768px) {
+    .card-hover:hover .project-text {
+        transform: none;
+        letter-spacing: normal;
+    }
+}
+
+.cert-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.cert-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.cert-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.cert-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#contact input,
+#contact textarea {
+    border-radius: 8px;
+}
+
+#contact button {
+    border-radius: 50px;
+    padding: 10px 30px;
+}
+
+footer {
+    background-color: #212529;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p,
+footer a {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p.lead {
+        font-size: 1rem;
+    }
+
+    #education .card:hover,
+    #projects .card-hover:hover {
+        transform: none;
+    }
+
+    #projects .typing {
+        border-right: none;
+        animation: none;
+        width: auto;
+    }
+}
